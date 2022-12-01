@@ -21,7 +21,7 @@ $(function() {
         $.ajax(API_URL)
         .then(function(data) {
             questionObjectsArray = data.results;
-            render(data.results);
+            render();
         }, function(error) {
             console.log(error);
         });
@@ -47,23 +47,10 @@ $(function() {
         $questionAnsweredCard.fadeOut(500, function() {
             $(this).remove();
         });
-        /*
-            Add feature to answer quiz question
-            1) store a reference to the target element that triggers a button click
-            event
-            2) store a value representing the given answer
-            3) store a value representing an identifying piece of information
-            for the quiz question being answered
-            4) lookup the quiz object and compare the given answer to the correct 
-            answer property
-            5) alert the user if they guess correctly or incorrectly
-            6) remove the answered question from the DOM
-        
-        */
     }
 
-    function render(quizQuestions) {
-        const quizCards = quizQuestions.map(function(questionObject, index) {
+    function render() {
+        const quizCards = questionObjectsArray.map(function(questionObject, index) {
             return `
             <article data-index="${index}">
                 <h2>${questionObject.question}</h2>
@@ -71,21 +58,6 @@ $(function() {
                 <button>False</button>
             </article>`;
         }).join('');
-
         $cardsSection.html(quizCards);
     }
-
-
-    // Psuedocode
-
-    /*
-    1) Select a dom element I can use to insert some quiz cards into
-
-    2) make an ajax request to the api and get some quiz data
-
-    3) loop over the list of quiz question objects and generate an html card for each object
-
-    4) use the selected dom element to append my quiz cards to the dom
-
-    */
 });
