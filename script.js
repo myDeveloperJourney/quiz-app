@@ -52,10 +52,12 @@ $(function() {
     function render() {
         const quizCards = questionObjectsArray.map(function(questionObject, index) {
             return `
-            <article data-index="${index}">
+            <article class="card" data-index="${index}">
                 <h2>${questionObject.question}</h2>
-                <button>True</button>
-                <button>False</button>
+                <section>
+                    <button>True</button>
+                    <button>False</button>
+                </section>
             </article>`;
         }).join('');
         $cardsSection.html(quizCards);

@@ -12,8 +12,8 @@ A simple web app that presents quiz questions to a user so that they can take qu
 
 ## Screenshots
 
-![wireframe]()
-![production version]()
+![wireframe](./imgs/wireframe.png)
+![production version](./imgs/app-screenshot.png)
 
 ## Getting Started
 
