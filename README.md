@@ -17,7 +17,7 @@ A simple web app that presents quiz questions to a user so that they can take qu
 
 ## Getting Started
 
-<a href="https://mydeveloperjourney.github.io/quiz-app/" target="_blank">Click here</a> to visit the deployed app!
+[Click here](https://mydeveloperjourney.github.io/quiz-app/) to visit the deployed app!
 
 ## Future Enhancements
 - Adding a feature that allows users to create accounts to save data
